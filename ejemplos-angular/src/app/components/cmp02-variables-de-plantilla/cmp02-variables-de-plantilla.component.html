@@ -1,0 +1,16 @@
+<h2>Tema 2: Variables de plantilla</h2>
+
+<video src="video.mp4" width="150" #video></video>
+
+<input type="range" (input)="changeVolume(video, $event)">
+
+<button type="button" (click)="play(video)">Play</button>
+<button type="button" (click)="pause(video)">Pause</button>
+
+
+<input type="text" #inputNombre>
+<button type="button" (click)="mostrarSaludo(inputNombre)">Saludar</button>
+<button type="button" (click)="mostrarSaludo2(inputNombre.value)">Saludar</button>
+
+<input type="text" (change)="setNombre($event)">
+<button type="button" (click)="mostrarSaludo3()">Saludar</button>

@@ -1,0 +1,27 @@
+<h2>Input</h2>
+
+<!-- <app-sugus></app-sugus> -->
+<app-lista-productos-sugus (onAddToCart)="addSugus($event)"></app-lista-productos-sugus>
+
+
+<!--
+<input type="text">
+<input type="number">
+<input type="color">
+ -->
+
+
+<h2>Output</h2>
+
+<div class="d-flex">
+
+  @for (sugus of carritoSugus; track $index) {
+    <div>
+      <app-sugus [color]="sugus.color" [sabor]="sugus.sabor"></app-sugus>
+      x {{sugus.cantidad}}
+    </div>
+  } @empty {
+    <p>Tu carrito está vacío. Añade los sugus.</p>
+  }
+
+</div>

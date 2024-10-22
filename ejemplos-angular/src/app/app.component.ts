@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Cmp01DataBindingComponent } from './components/cmp01-data-binding/cmp01-data-binding.component';
 import { Cmp02VariablesDePlantillaComponent } from "./components/cmp02-variables-de-plantilla/cmp02-variables-de-plantilla.component";
+import { Cmp03InputOutputComponent } from "./components/cmp03-input-output/cmp03-input-output.component";
+import { Cmp04DirectivasComponent } from "./components/cmp04-directivas/cmp04-directivas.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Cmp01DataBindingComponent, Cmp02VariablesDePlantillaComponent],
+  imports: [RouterOutlet, Cmp01DataBindingComponent, Cmp02VariablesDePlantillaComponent, Cmp03InputOutputComponent, Cmp04DirectivasComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

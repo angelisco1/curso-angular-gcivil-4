@@ -1,0 +1,54 @@
+<h2>Directivas</h2>
+
+<h3>De atributo</h3>
+
+
+<h3>Estructurales</h3>
+
+<!-- <button *ngIf="!isAuthenticated">Login</button>
+<button *ngIf="isAuthenticated">Logout</button> -->
+
+@if (isAuthenticated) {
+  <button type="button" (click)="toggleIsAuthenticated()">Logout</button>
+} @else {
+  <button type="button" (click)="toggleIsAuthenticated()">Login</button>
+}
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Nº</th>
+      <th>Nombre</th>
+      <th>Ticker</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (accion of precioAcciones; track accion.id; let posicion = $index; let esPrimero = $first; let esUltimo = $last; let esPar = $even) {
+
+      <tr [ngClass]="{primeraFila: esPrimero, ultimaFila: esUltimo, filaPar: esPar}">
+        <td>{{ posicion + 1 }}</td>
+        <td>{{ accion.nombre }}</td>
+        <td>{{ accion.ticker }}</td>
+        <td>{{ accion.precio }}€</td>
+      </tr>
+
+    }
+  </tbody>
+</table>
+
+@switch (role) {
+  @case ('admin') {
+    <p>Puedes hacer de todo</p>
+  }
+  @case ('designer') {
+    <p>Puedes modificar los datos pero no borrarlos</p>
+  }
+  @case ('free') {
+    <p>Puedes ver solo tus datos</p>
+  }
+  @default {
+    <p>Logueate primero</p>
+  }
+}

@@ -1,0 +1,13 @@
+<h2>Carta del restaurante 3000</h2>
+
+<div>
+
+  @for (plato of platos; track $index) {
+    <app-plato></app-plato>
+  } @empty {
+    <div class="alert alert-warning" role="alert">
+      No hay platos en la carta.
+    </div>
+  }
+
+</div>

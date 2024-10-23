@@ -1,6 +1,15 @@
 <h2>Directivas</h2>
 
 <h3>De atributo</h3>
+<!-- ngStyle, ngClass, ngModel -->
+<!-- <p appMarcar color="orange">Este párrafo se pinta en naranja</p> -->
+<p appMarcar="orange">Este párrafo se pinta en naranja</p>
+
+<p appMarcar="yellow">Este párrafo se pinta en amarillo</p>
+
+<input type="color" [(ngModel)]="color">
+
+<p [appMarcar]="color">El usuario elige el color</p>
 
 
 <h3>Estructurales</h3>
@@ -11,7 +20,7 @@
 @if (isAuthenticated) {
   <button type="button" (click)="toggleIsAuthenticated()">Logout</button>
 } @else {
-  <button type="button" (click)="toggleIsAuthenticated()">Login</button>
+  <button type="button" appMarcar="blue" (click)="toggleIsAuthenticated()">Login</button>
 }
 
 

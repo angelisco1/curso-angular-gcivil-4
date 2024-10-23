@@ -1,5 +1,7 @@
 import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { MarcarDirective } from '../../directives/marcar.directive';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cmp04-directivas',
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
   imports: [
     // NgIf,
     NgClass,
+    MarcarDirective,
+    FormsModule,
   ],
   templateUrl: './cmp04-directivas.component.html',
   styleUrl: './cmp04-directivas.component.css'
@@ -23,6 +27,8 @@ export class Cmp04DirectivasComponent {
     { id: 5, nombre: 'Microsoft', ticker: 'MSFT', precio: 315 },
     { id: 6, nombre: 'Nvidia', ticker: 'NVDA', precio: 430 }
   ];
+
+  color: string = '#ffffff'
 
   toggleIsAuthenticated() {
     this.isAuthenticated = !this.isAuthenticated

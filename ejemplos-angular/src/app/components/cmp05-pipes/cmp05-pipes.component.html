@@ -1,0 +1,11 @@
+<h2>Tema 5: Pipes</h2>
+
+<div>
+  <h3>{{producto.titulo | titlecase}} - {{producto.precio | currency:'EUR'}}</h3>
+  <p>Fecha lanzamiento: {{producto.fechaLanzamiento | date:'dd/MM/Y'}}</p>
+  <p>{{producto.descripcion | ocultarPalabras:['ipsum', 'libero', 'aliquam']:'-' | slice:0:180}}...</p>
+  <p>{{producto.descripcion | ocultarPalabras:['ipsum', 'libero', 'aliquam'] | slice:0:180}}...</p>
+</div>
+
+<pre>{{producto}}</pre>
+<pre>{{producto | json}}</pre>

@@ -3,7 +3,7 @@
 <div>
 
   @for (plato of platos; track $index) {
-    <app-plato></app-plato>
+    <app-plato [plato]="plato"></app-plato>
   } @empty {
     <div class="alert alert-warning" role="alert">
       No hay platos en la carta.

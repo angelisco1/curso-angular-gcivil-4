@@ -1,0 +1,80 @@
+{
+  "platos": [
+    {
+      "id": "1",
+      "nombre": "Salmorejo",
+      "descripcion": "Un plato frío típico de la cocina andaluza, hecho principalmente con tomate, pan y aceite.",
+      "precio": 7,
+      "ingredientes": [
+        "Tomate",
+        "Sal",
+        "Aceite",
+        "Pan",
+        "Ajo",
+        "Huevo duro",
+        "Jamón"
+      ],
+      "imagen": "https://ejemplo.com/imagenes/salmorejo.jpg",
+      "disponible": true,
+      "alergenos": [
+        "Gluten",
+        "Huevo"
+      ]
+    },
+    {
+      "id": "2",
+      "nombre": "Paella de Marisco",
+      "descripcion": "Clásico arroz español con una variedad de mariscos frescos y sabor a azafrán.",
+      "precio": 12,
+      "ingredientes": [
+        "Arroz",
+        "Gambas",
+        "Calamares",
+        "Mejillones",
+        "Azafrán",
+        "Aceite de oliva",
+        "Pimiento"
+      ],
+      "imagen": "https://ejemplo.com/imagenes/paella.jpg",
+      "disponible": true,
+      "alergenos": [
+        "Mariscos",
+        "Moluscos"
+      ]
+    },
+    {
+      "id": "3",
+      "nombre": "Tarta de Queso",
+      "descripcion": "Un postre cremoso y delicioso hecho a base de queso, ideal para cerrar una comida.",
+      "precio": 5,
+      "ingredientes": [
+        "Queso crema",
+        "Azúcar",
+        "Huevos",
+        "Galletas",
+        "Mantequilla"
+      ],
+      "imagen": "https://ejemplo.com/imagenes/tarta_queso.jpg",
+      "disponible": true,
+      "alergenos": [
+        "Lácteos",
+        "Gluten",
+        "Huevo"
+      ]
+    },
+    {
+      "id": "",
+      "nombre": "asdasd",
+      "descripcion": "adas",
+      "precio": 123,
+      "imagen": "https://adsasd.com/sadsa.png",
+      "ingredientes": [
+        "Patata",
+        "Sal",
+        "Aceite"
+      ],
+      "alergenos": [],
+      "disponible": true
+    }
+  ]
+}

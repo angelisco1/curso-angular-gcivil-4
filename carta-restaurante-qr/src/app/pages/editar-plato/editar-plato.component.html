@@ -1,3 +1,7 @@
 <h2>Editar datos del plato</h2>
 
-<!-- <app-formulario-plato (onSave)="editarPlato()"></app-formulario-plato> -->
+@if (loading) {
+  <p>Loading...</p>
+} @else {
+  <app-formulario-plato [plato]="plato" (onSave)="editarPlato($event)"></app-formulario-plato>
+}

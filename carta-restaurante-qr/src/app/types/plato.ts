@@ -1,5 +1,5 @@
 export interface Plato {
-  id: string,
+  id?: string,
   nombre: string,
   descripcion: string,
   precio: number,

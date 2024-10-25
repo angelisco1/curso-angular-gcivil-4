@@ -1,8 +1,22 @@
 <div class="container">
   <h1>Carta restaurante</h1>
 
-  <!-- <app-inicio></app-inicio> -->
-   <app-crear-plato></app-crear-plato>
+  <header>
+    <ul>
+      <li>
+        <a [routerLink]="['/inicio']">Inicio</a>
+      </li>
+      <li>
+        <a [routerLink]="['/crear-plato']">Crear plato</a>
+      </li>
+    </ul>
+  </header>
+
+
+  <router-outlet></router-outlet>
+
+  <!-- <app-inicio></app-inicio>
+  <app-crear-plato></app-crear-plato> -->
 
 </div>
 <!-- <app-header></app-header> -->

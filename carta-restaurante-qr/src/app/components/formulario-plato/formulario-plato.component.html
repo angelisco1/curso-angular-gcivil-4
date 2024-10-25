@@ -26,7 +26,7 @@
 
       @for (ingrediente of ingredientes; track $index) {
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" [value]="ingrediente" [id]="ingrediente" (change)="toggleIngrediente($event)">
+          <input class="form-check-input" type="checkbox" [value]="ingrediente" [id]="ingrediente" (change)="toggleIngrediente($event)" [checked]="listaIngredientes.includes(ingrediente)">
           <label class="form-check-label" [for]="ingrediente">
             {{ingrediente}}
           </label>
@@ -36,7 +36,7 @@
     </fieldset>
 
     <div class="mb-3">
-      <button type="submit" class="btn btn-primary mb-3">Guardar</button>
+      <button type="submit" class="btn btn-primary mb-3" [disabled]="form.invalid">Guardar</button>
     </div>
 
   </form>

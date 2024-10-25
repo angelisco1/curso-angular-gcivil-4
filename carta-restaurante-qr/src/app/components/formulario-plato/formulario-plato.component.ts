@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Plato } from '../../types/plato';
 import { AbstractControl, FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { listaNoVacia } from '../../validators/lista-no-vacia.validator';
 
 @Component({
   selector: 'app-formulario-plato',
@@ -29,6 +30,10 @@ export class FormularioPlatoComponent {
     this.form = this.getInitialForm(this.plato!)
   }
 
+  get listaIngredientes() {
+    return this.form?.getRawValue().ingredientes
+  }
+
   toggleIngrediente(event: Event) {
     const ingrediente = (event.target as HTMLInputElement).value
 
@@ -42,11 +47,12 @@ export class FormularioPlatoComponent {
           return true
         }
         return false
-      })
+      });
 
-      console.log(ingredientesActualizados)
+      console.log(ingredientesActualizados);
 
       // TODO: revisar el error
+      (this.form?.get('ingredientes') as FormArray).controls = ingredientesActualizados
       // if (this.form?.get('ingredientes')) {
       //   this.form.get('ingredientes')?.setValue(ingredientesActualizados)
       // }
@@ -57,6 +63,8 @@ export class FormularioPlatoComponent {
 
       (this.form?.get('ingredientes') as FormArray).controls.push(formControl)
     }
+
+    // this.form?.markAllAsTouched()
   }
 
   guardar() {
@@ -69,12 +77,17 @@ export class FormularioPlatoComponent {
   }
 
   private getInitialForm(plato: Plato) {
+    const ingredientesControls = plato.ingredientes.map((ingrediente: string) => {
+      return new FormControl(ingrediente)
+    })
+
     return new FormGroup({
       nombre: new FormControl(plato.nombre, [Validators.required]),
       descripcion: new FormControl(plato.descripcion, Validators.required),
       precio: new FormControl(plato.precio, [Validators.required, Validators.min(0)]),
       imagen: new FormControl(plato.imagen, [Validators.required]),
-      ingredientes: new FormArray([]),
+      // ingredientes: new FormArray([], listaNoVacia),
+      ingredientes: new FormArray(ingredientesControls),
       alergenos: new FormArray([]),
       disponible: new FormControl(plato.disponible),
       id: new FormControl(plato.id),

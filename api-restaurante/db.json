@@ -63,15 +63,69 @@
       ]
     },
     {
-      "id": "",
-      "nombre": "asdasd",
-      "descripcion": "adas",
+      "nombre": "Patatas fritas",
+      "descripcion": "sfsdfsd",
       "precio": 123,
-      "imagen": "https://adsasd.com/sadsa.png",
+      "imagen": "adsa",
       "ingredientes": [
         "Patata",
         "Sal",
         "Aceite"
+      ],
+      "alergenos": [],
+      "disponible": true,
+      "id": "79a3"
+    },
+    {
+      "id": "2e8a",
+      "nombre": "adasd",
+      "descripcion": "asdasd",
+      "precio": 3,
+      "imagen": "asdasd",
+      "ingredientes": [
+        "Sal",
+        "Patata"
+      ],
+      "alergenos": [],
+      "disponible": true
+    },
+    {
+      "id": "07a5",
+      "nombre": "adasdas",
+      "descripcion": "asdasd",
+      "precio": 20,
+      "imagen": "adasd",
+      "ingredientes": [
+        "Pollo",
+        "Fideos",
+        "Patata",
+        "Sal"
+      ],
+      "alergenos": [],
+      "disponible": true
+    },
+    {
+      "id": "9a52",
+      "nombre": "adasd",
+      "descripcion": "asdas",
+      "precio": 2,
+      "imagen": "adsas",
+      "ingredientes": [
+        "Tomate",
+        "Pollo"
+      ],
+      "alergenos": [],
+      "disponible": true
+    },
+    {
+      "id": "9bc6",
+      "nombre": "gguyguyg",
+      "descripcion": "tyutyu",
+      "precio": 55,
+      "imagen": "guytuy",
+      "ingredientes": [
+        "Aceite",
+        "Tomate"
       ],
       "alergenos": [],
       "disponible": true
